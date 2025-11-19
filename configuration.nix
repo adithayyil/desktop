@@ -2,7 +2,7 @@
 
 {
   imports = [
-    # Hardware
+    # Hardware (machine-specific, stays in /etc/nixos)
     /etc/nixos/hardware-configuration.nix
 
     # System modules
