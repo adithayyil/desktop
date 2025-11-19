@@ -11,6 +11,7 @@
     ./modules/users.nix
     ./modules/fonts.nix
     ./modules/services.nix
+    ./modules/power.nix
 
     # Desktop environment
     ./modules/desktop/sway.nix
