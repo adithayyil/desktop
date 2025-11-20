@@ -5,6 +5,7 @@
     ./desktop/sway.nix
     ./programs/kitty.nix
     ./programs/fuzzel.nix
+    ./programs/vscodium.nix
   ];
 
   # Home Manager settings
@@ -28,7 +29,6 @@
     # Dev
     claude-code
     uv
-    vscodium
 
     # Desktop apps
     vesktop
