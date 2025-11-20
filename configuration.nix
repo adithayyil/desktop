@@ -29,19 +29,8 @@
   # Enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  # System packages
+  # System packages 
   environment.systemPackages = with pkgs; [
-    neovim
-    wget
-    kitty
-    vesktop
-    claude-code
-    uv
-    vscodium
-    btop
-    just
-    figma-linux
-    signal-desktop
   ];
 
   # NixOS release version (DO NOT CHANGE)

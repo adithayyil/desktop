@@ -19,7 +19,21 @@
 
   # User packages that don't need special configuration
   home.packages = with pkgs; [
-    # Add any user-specific packages here
+    # CLI 
+    neovim
+    wget
+    btop
+    just
+
+    # Dev
+    claude-code
+    uv
+    vscodium
+
+    # Desktop apps
+    vesktop
+    figma-linux
+    signal-desktop
   ];
 
   # Basic XDG configuration
