@@ -41,6 +41,7 @@
     btop
     just
     figma-linux
+    signal-desktop
   ];
 
   # NixOS release version (DO NOT CHANGE)
