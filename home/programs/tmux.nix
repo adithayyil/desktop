@@ -60,6 +60,7 @@
       # Pane borders
       set-option -g pane-border-style "fg=#9ca0b0"
       set-option -g pane-active-border-style "fg=#7287fd"
+      set-option -g pane-border-lines heavy
 
       # Message style
       set-option -g message-style "bg=#7287fd,fg=#eff1f5"
@@ -67,7 +68,7 @@
 
       # Status bar
       set-option -g status-left "#[fg=#eff1f5,bg=#7287fd,bold] #S #[fg=#7287fd,bg=#eff1f5]"
-      set-option -g status-right "#[fg=#7287fd,bg=#eff1f5]#[fg=#eff1f5,bg=#7287fd] %H:%M %d-%b "
+      set-option -g status-right "#[fg=#7287fd,bg=#eff1f5]#[fg=#eff1f5,bg=#7287fd] #H "
       set-option -g status-left-length 20
       set-option -g status-right-length 50
 
