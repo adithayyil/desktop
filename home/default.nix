@@ -5,6 +5,7 @@
     ./desktop/sway.nix
     ./programs/kitty.nix
     ./programs/fuzzel.nix
+    ./programs/tmux.nix
     ./programs/vscodium.nix
   ];
 
@@ -28,12 +29,14 @@
 
     # Dev
     claude-code
+    github-copilot-cli
     uv
 
     # Desktop apps
     vesktop
     figma-linux
     signal-desktop
+    davinci-resolve
   ];
 
   # Basic XDG configuration
