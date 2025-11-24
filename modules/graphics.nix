@@ -9,16 +9,19 @@
       # AMD GPU drivers (RADV Vulkan driver included by default)
       mesa
 
-      # OpenCL support for AMD
-      rocmPackages.clr.icd
-      rocmPackages.clr
+      # OpenCL support for AMD (RustICL)
+      mesa.opencl  # Mesa's RustICL OpenCL implementation
+    ];
+
+    # 32-bit OpenCL support
+    extraPackages32 = with pkgs.pkgsi686Linux; [
+      mesa.opencl
     ];
   };
 
   # AMD GPU kernel module
   boot.initrd.kernelModules = [ "amdgpu" ];
 
-  # Environment variables for AMD GPU
   environment.variables = {
     # Use AMD Vulkan driver
     AMD_VULKAN_ICD = "RADV";
@@ -26,13 +29,16 @@
     # ROCm device selection (for OpenCL)
     ROC_ENABLE_PRE_VEGA = "1";
 
-    # Enable Rusticl (Gallium Rust OpenCL) for better DaVinci Resolve support
-    RUSTICL_ENABLE = "amdgpu,amdgpu-pro,radv,radeon";
+    # Enable Rusticl (Gallium Rust OpenCL)
+    RUSTICL_ENABLE = "radeonsi";
 
-    # Force discrete GPU for DaVinci Resolve
+    # Force discrete GPU
     DRI_PRIME = "1";
 
-    # Use XCB platform for Qt (better stability with DaVinci Resolve)
+    # Use XCB platform for Qt
     QT_QPA_PLATFORM = "xcb";
+
+    # Help OpenCL find the ICD loader
+    OCL_ICD_VENDORS = "/run/opengl-driver/etc/OpenCL/vendors";
   };
 }
