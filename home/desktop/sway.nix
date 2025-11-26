@@ -114,7 +114,7 @@ in
         "${mod}+space" = "exec ${menu}";
         "${mod}+Shift+r" = "reload";
         "${mod}+Shift+e" = "exec swaymsg exit";
-        "${mod}+Escape" = "exec swaylock -f";
+        "${mod}+Escape" = "exec ${pkgs.swaylock-effects}/bin/swaylock -f";
 
         # Focus (vim-style)
         "${mod}+h" = "focus left";

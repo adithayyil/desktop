@@ -5,9 +5,9 @@
     enable = true;
     events = [
       # Lock before sleep
-      { event = "before-sleep"; command = "${pkgs.swaylock}/bin/swaylock -f"; }
+      { event = "before-sleep"; command = "${pkgs.swaylock-effects}/bin/swaylock -f"; }
       # Lock on lid close
-      { event = "lock"; command = "${pkgs.swaylock}/bin/swaylock -f"; }
+      { event = "lock"; command = "${pkgs.swaylock-effects}/bin/swaylock -f"; }
     ];
     timeouts = [
       # Dim screen after 5 minutes
@@ -19,7 +19,7 @@
       # Lock after 10 minutes
       {
         timeout = 600;
-        command = "${pkgs.swaylock}/bin/swaylock -f";
+        command = "${pkgs.swaylock-effects}/bin/swaylock -f";
       }
       # Turn off displays after 15 minutes
       {
