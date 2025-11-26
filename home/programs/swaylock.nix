@@ -3,9 +3,15 @@
 {
   programs.swaylock = {
     enable = true;
+    package = pkgs.swaylock-effects;
     settings = {
       # Catppuccin Latte colors
       color = "eff1f5";  # Base background
+
+      # Clock
+      clock = true;
+      timestr = "%H:%M";
+      datestr = "%a, %d %b";
 
       # Indicator ring colors
       ring-color = "9ca0b0";           # Overlay0 (inactive)

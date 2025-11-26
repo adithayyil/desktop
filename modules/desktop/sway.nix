@@ -8,7 +8,7 @@
       brightnessctl
       wl-clipboard
       hyprshot
-      swaylock
+      swaylock-effects
       swayidle
       waybar
       fuzzel
