@@ -59,7 +59,7 @@
 
       # Pane borders
       set-option -g pane-border-style "fg=#9ca0b0"
-      set-option -g pane-active-border-style "fg=#7287fd"
+      set-option -g pane-active-border-style "fg=#9ca0b0"
       set-option -g pane-border-lines heavy
 
       # Message style
