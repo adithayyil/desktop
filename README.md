@@ -1,4 +1,4 @@
-# nix
+# desktop
 
 My NixOS config with flakes + home-manager. 😋
 
