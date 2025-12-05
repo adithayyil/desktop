@@ -9,6 +9,7 @@ in
     ./programs/kitty.nix
     ./programs/fuzzel.nix
     ./programs/tmux.nix
+    ./programs/mako.nix
   ];
 
   # Home Manager settings
@@ -41,6 +42,7 @@ in
     signal-desktop
     mpv
     davinci
+    spotify
   ];
 
   # Basic XDG configuration

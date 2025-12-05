@@ -177,6 +177,7 @@ in
 
       # Startup applications
       startup = [
+        { command = "mako"; }
         { command = "waybar"; }
         { command = "swayidle"; }
         { command = "swaymsg 'workspace number 1; exec ${terminal}'"; }
