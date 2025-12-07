@@ -50,9 +50,7 @@ in
     wl-clipboard
     hyprshot
     swaylock-effects
-    swayidle
     waybar
-    fuzzel
     pulseaudio
   ];
 
