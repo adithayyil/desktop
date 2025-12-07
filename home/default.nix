@@ -11,6 +11,7 @@ in
     ./programs/tmux.nix
     ./programs/mako.nix
     ./programs/git.nix
+    ./shell/bash.nix
   ];
 
   # Home Manager settings
