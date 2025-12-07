@@ -21,7 +21,6 @@
 
     # Programs
     ./programs/firefox.nix
-    ./programs/git.nix
     ./programs/steam.nix
   ];
 
