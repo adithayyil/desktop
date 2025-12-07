@@ -20,51 +20,5 @@
 
   programs.starship = {
     enable = true;
-    settings = {
-      # Minimal prompt format
-      format = lib.concatStrings [
-        "$nix_shell"
-        "$directory"
-        "$git_branch"
-        "$git_status"
-        "$character"
-      ];
-
-      # Right side (empty for now)
-      right_format = "";
-
-      # Directory
-      directory = {
-        style = "bold blue";
-        truncation_length = 3;
-        truncate_to_repo = true;
-      };
-
-      # Git branch
-      git_branch = {
-        symbol = " ";
-        style = "bold purple";
-        format = "[$symbol$branch]($style) ";
-      };
-
-      # Git status
-      git_status = {
-        style = "bold red";
-        format = "([$all_status$ahead_behind]($style) )";
-      };
-
-      # Nix shell
-      nix_shell = {
-        symbol = " ";
-        style = "bold purple";
-        format = "[$symbol]($style) ";
-      };
-
-      # Prompt symbol
-      character = {
-        success_symbol = "[\\$](bold blue)";
-        error_symbol = "[\\$](bold red)";
-      };
-    };
   };
 }
