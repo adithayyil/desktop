@@ -1,6 +1,6 @@
-# desktop
+# nix
 
-My NixOS config with flakes + home-manager. 😋
+My NixOS flake! Still heavily WIP.
 
 ## Structure
 
