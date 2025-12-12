@@ -37,6 +37,7 @@ in
     claude-code
     github-copilot-cli
     uv
+    nixfmt-rfc-style
 
     # Desktop apps
     vesktop
