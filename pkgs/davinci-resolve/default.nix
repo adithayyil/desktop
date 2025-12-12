@@ -3,7 +3,7 @@
 # DaVinci Resolve with additional Python packages for scripting and OpenCL support
 #
 # This wrapper provides:
-# 1. Extra python packages accessible for scripting 
+# 1. Extra python packages accessible for scripting
 # 2. OpenCL libraries explicitly injected into the FHS environment
 #
 # Note: The base davinci-resolve package already includes ocl-icd in targetPkgs,
@@ -11,10 +11,12 @@
 # because the FHS environment doesn't automatically find it in the nix store.
 
 let
-  pythonWithPackages = pkgs.python3.withPackages (ps: with ps; [
-    pyqt5
-    tkinter
-  ]);
+  pythonWithPackages = pkgs.python3.withPackages (
+    ps: with ps; [
+      pyqt5
+      tkinter
+    ]
+  );
 in
 pkgs.symlinkJoin {
   name = "davinci-resolve-wrapped";

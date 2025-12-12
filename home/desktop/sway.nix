@@ -1,4 +1,9 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 let
   mod = "Mod4";
@@ -27,7 +32,7 @@ in
       modifier = mod;
       inherit terminal menu;
 
-      bars = [];
+      bars = [ ];
 
       # Displays
       output = {
@@ -51,14 +56,14 @@ in
         };
       };
 
-      # Touchpad 
+      # Touchpad
       input = {
         "type:touchpad" = {
           natural_scroll = "enabled";
         };
       };
 
-      # Window 
+      # Window
       window = {
         border = 2;
         titlebar = false;

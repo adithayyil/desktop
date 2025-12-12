@@ -1,4 +1,9 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
   programs.waybar = {
@@ -11,9 +16,19 @@
         height = 32;
         spacing = 4;
 
-        modules-left = [ "custom/nixos" "sway/workspaces" "sway/mode" ];
+        modules-left = [
+          "custom/nixos"
+          "sway/workspaces"
+          "sway/mode"
+        ];
         modules-center = [ "clock" ];
-        modules-right = [ "tray" "network" "bluetooth" "pulseaudio" "battery" ];
+        modules-right = [
+          "tray"
+          "network"
+          "bluetooth"
+          "pulseaudio"
+          "battery"
+        ];
 
         "sway/workspaces" = {
           disable-scroll = true;
@@ -72,8 +87,31 @@
           format-charging = "{icon} {capacity}%";
           format-plugged = "󰚥 {capacity}%";
           format-icons = {
-            default = [ "󰂎" "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹" ];
-            charging = [ "󰢜" "󰂆" "󰂇" "󰂈" "󰢝" "󰂉" "󰢞" "󰂊" "󰂋" "󰂅" ];
+            default = [
+              "󰂎"
+              "󰁺"
+              "󰁻"
+              "󰁼"
+              "󰁽"
+              "󰁾"
+              "󰁿"
+              "󰂀"
+              "󰂁"
+              "󰂂"
+              "󰁹"
+            ];
+            charging = [
+              "󰢜"
+              "󰂆"
+              "󰂇"
+              "󰂈"
+              "󰢝"
+              "󰂉"
+              "󰢞"
+              "󰂊"
+              "󰂋"
+              "󰂅"
+            ];
           };
           states = {
             warning = 30;
@@ -87,7 +125,13 @@
           format-wifi = "{icon}";
           format-ethernet = "󰈀";
           format-disconnected = "󰖪";
-          format-icons = [ "󰤯" "󰤟" "󰤢" "󰤥" "󰤨" ];
+          format-icons = [
+            "󰤯"
+            "󰤟"
+            "󰤢"
+            "󰤥"
+            "󰤨"
+          ];
           tooltip-format-wifi = "{essid} ({signalStrength}%)\n󰇚 {bandwidthDownBytes}  󰕒 {bandwidthUpBytes}";
           tooltip-format-ethernet = "{ifname}\n󰩟 {ipaddr}\n󰓅 {gwaddr}";
           tooltip-format-disconnected = "Disconnected";
@@ -101,7 +145,11 @@
           format-icons = {
             headphone = "󰋋";
             headset = "󰋎";
-            default = [ "󰕿" "󰖀" "󰕾" ];
+            default = [
+              "󰕿"
+              "󰖀"
+              "󰕾"
+            ];
           };
           on-click = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
           on-click-right = "pavucontrol";

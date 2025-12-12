@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   hardware.graphics = {
@@ -10,7 +15,7 @@
       mesa
 
       # OpenCL support for AMD (RustICL)
-      mesa.opencl  # Mesa's RustICL OpenCL implementation
+      mesa.opencl # Mesa's RustICL OpenCL implementation
     ];
 
     # 32-bit OpenCL support

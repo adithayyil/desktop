@@ -21,27 +21,27 @@
       ];
 
       userSettings = {
-      # Editor settings
-      "editor.fontSize" = 16;
-      "editor.fontFamily" = "'CommitMono', 'monospace'";
-      "editor.fontLigatures" = true;
-      "editor.formatOnSave" = true;
-      "editor.minimap.enabled" = false;
-      "editor.renderWhitespace" = "selection";
+        # Editor settings
+        "editor.fontSize" = 16;
+        "editor.fontFamily" = "'CommitMono', 'monospace'";
+        "editor.fontLigatures" = true;
+        "editor.formatOnSave" = true;
+        "editor.minimap.enabled" = false;
+        "editor.renderWhitespace" = "selection";
 
-      # Workbench
-      "workbench.startupEditor" = "none";
-      "workbench.colorTheme" = "Catppuccin Latte";
-      "workbench.iconTheme" = "catppuccin-latte";
+        # Workbench
+        "workbench.startupEditor" = "none";
+        "workbench.colorTheme" = "Catppuccin Latte";
+        "workbench.iconTheme" = "catppuccin-latte";
 
-      # Terminal
-      "terminal.integrated.fontFamily" = "'CommitMono'";
-      "terminal.integrated.fontSize" = 13;
+        # Terminal
+        "terminal.integrated.fontFamily" = "'CommitMono'";
+        "terminal.integrated.fontSize" = 13;
 
-      # Files
-      "files.trimTrailingWhitespace" = true;
-      "files.insertFinalNewline" = true;
-      "files.trimFinalNewlines" = true;
+        # Files
+        "files.trimTrailingWhitespace" = true;
+        "files.insertFinalNewline" = true;
+        "files.trimFinalNewlines" = true;
       };
     };
   };

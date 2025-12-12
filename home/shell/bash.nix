@@ -1,11 +1,19 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
   programs.bash = {
     enable = true;
 
     # History settings
-    historyControl = [ "ignoredups" "ignorespace" ];
+    historyControl = [
+      "ignoredups"
+      "ignorespace"
+    ];
     historyFile = "${config.home.homeDirectory}/.bash_history";
     historyFileSize = 10000;
     historySize = 10000;

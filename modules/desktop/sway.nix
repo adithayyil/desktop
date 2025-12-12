@@ -1,11 +1,16 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   # Window manager
   programs.sway = {
     enable = true;
     wrapperFeatures.gtk = true;
-    extraPackages = [];  # Packages managed by home-manager
+    extraPackages = [ ]; # Packages managed by home-manager
   };
 
   # For screen sharing and file pickers

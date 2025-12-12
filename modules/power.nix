@@ -1,7 +1,12 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
-  # Power management 
+  # Power management
   services.tlp = {
     enable = true;
     settings = {
