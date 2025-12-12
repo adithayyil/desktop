@@ -45,6 +45,7 @@ in
     mpv
     davinci
     spotify
+    lumafly
 
     # Sway desktop environment
     brightnessctl
