@@ -6,8 +6,9 @@
 
 {
   imports = [
-    # Hardware (machine-specific, stays in /etc/nixos)
-    /etc/nixos/hardware-configuration.nix
+    # Hardware configuration
+    # cp hardware-configuration.nix hardware.nix
+    # ./hardware.nix
 
     # Common modules
     ../../common/boot.nix

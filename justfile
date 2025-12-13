@@ -3,22 +3,22 @@ default: all
 
 # Rebuild system only
 switch:
-    nh os switch -- --impure
+    nh os switch
 
 # Rebuild home only
 home:
-    nh home switch -- --impure
+    nh home switch
 
 # Rebuild both system and home
 all: switch home
 
 # Test without switching boot
 test:
-    sudo nixos-rebuild test --flake . --impure
+    sudo nixos-rebuild test --flake .
 
 # Check for errors
 check:
-    nixos-rebuild dry-build --flake . --impure
+    nixos-rebuild dry-build --flake .
 
 # Update flake inputs
 update:
@@ -57,11 +57,11 @@ info:
 
 # Check flake
 lint:
-    nix flake check --impure
+    nix flake check
 
 # Build server config (no deploy)
 build-server:
-    nix build .#nixosConfigurations.server.config.system.build.toplevel --impure
+    nix build .#nixosConfigurations.server.config.system.build.toplevel
 
 # Deploy to server
 deploy-server:
