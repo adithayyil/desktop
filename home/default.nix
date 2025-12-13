@@ -2,7 +2,6 @@
   config,
   pkgs,
   lib,
-  inputs,
   ...
 }:
 
@@ -45,7 +44,7 @@ in
     github-copilot-cli
     uv
     nixfmt-rfc-style
-    deploy-rs.deploy-rs
+    deploy-rs
 
     # Desktop apps
     vesktop
