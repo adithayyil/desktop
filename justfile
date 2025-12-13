@@ -58,3 +58,22 @@ info:
 # Check flake
 lint:
     nix flake check --impure
+
+# Build server config (no deploy)
+build-server:
+    nix build .#nixosConfigurations.server.config.system.build.toplevel --impure
+
+# Deploy to server
+deploy-server:
+    deploy .#server --skip-checks
+
+# SSH to server
+ssh-server:
+    ssh adi@server
+
+# Update and deploy server
+upgrade-server: update deploy-server
+
+# Clean server generations
+clean-server:
+    ssh adi@server "sudo nix-collect-garbage --delete-older-than 7d"

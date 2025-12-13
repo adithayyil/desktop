@@ -2,12 +2,12 @@
   config,
   lib,
   pkgs,
+  hostname,
   ...
 }:
 
 {
-  networking.hostName = "think";
-  networking.networkmanager.enable = true;
+  networking.hostName = hostname;
 
   time.timeZone = "America/Toronto";
 }

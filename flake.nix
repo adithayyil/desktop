@@ -8,6 +8,11 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    deploy-rs = {
+      url = "github:serokell/deploy-rs";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -15,15 +20,22 @@
       self,
       nixpkgs,
       home-manager,
+      deploy-rs,
       ...
     }:
-    {
-      # System configuration
-      nixosConfigurations.think = nixpkgs.lib.nixosSystem {
+    let
+      # Helper function to create system configurations
+      mkSystem = hostname: nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        modules = [
-          ./configuration.nix
-        ];
+        specialArgs = { inherit hostname; };
+        modules = [ ./hosts/${hostname}/configuration.nix ];
+      };
+    in
+    {
+      # System configurations
+      nixosConfigurations = {
+        think = mkSystem "think";
+        server = mkSystem "server";
       };
 
       # home-manager configuration
@@ -34,5 +46,20 @@
         };
         modules = [ ./home ];
       };
+
+      # deploy-rs configuration
+      deploy.nodes.server = {
+        hostname = "server";
+        profiles.system = {
+          sshUser = "adi";
+          user = "root";
+          path = deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.server;
+        };
+      };
+
+      # Validation checks
+      checks = builtins.mapAttrs (
+        system: deployLib: deployLib.deployChecks self.deploy
+      ) deploy-rs.lib;
     };
 }
