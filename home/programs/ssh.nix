@@ -16,7 +16,7 @@
       "meth" = {
         hostname = "10.0.0.76";
         user = "adi";
-        identityFile = "~/.ssh/methamphetamine";
+        identityFile = "~/.ssh/meth";
       };
 
       "github.com" = {

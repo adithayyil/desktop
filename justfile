@@ -59,21 +59,21 @@ info:
 lint:
     nix flake check
 
-# Build server config (no deploy)
-build-server:
-    nix build .#nixosConfigurations.methamphetamine.config.system.build.toplevel
+# Build config for a host (no deploy)
+build host="meth":
+    nix build .#nixosConfigurations.{{host}}.config.system.build.toplevel
 
-# Deploy to server
-deploy-server:
-    deploy .#methamphetamine --skip-checks
+# Deploy to a host
+deploy host:
+    deploy .#{{host}} --skip-checks
 
-# SSH to server
-ssh-server:
-    ssh meth
+# SSH to a host
+ssh host:
+    ssh {{host}}
 
-# Update and deploy server
-upgrade-server: update deploy-server
+# Update and deploy to a host
+deploy-upgrade host: update (deploy host)
 
-# Clean server generations
-clean-server:
-    ssh meth "sudo nix-collect-garbage --delete-older-than 7d"
+# Clean generations on a host
+clean-remote host:
+    ssh {{host}} "sudo nix-collect-garbage --delete-older-than 7d"
