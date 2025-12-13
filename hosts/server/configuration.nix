@@ -7,7 +7,8 @@
 {
   imports = [
     # Hardware configuration
-    ./hardware.nix
+    # cp the hardware-configuration.nix from /etc
+    # ./hardware.nix
 
     # Common modules
     ../../common/boot.nix
