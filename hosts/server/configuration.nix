@@ -41,6 +41,9 @@
     ncdu
   ];
 
+  # Trust this machine's nix store for deployments
+  nix.settings.trusted-users = [ "adi" "root" ];
+
   # [!!DO NOT CHANGE!!] NixOS release version [!!DO NOT CHANGE!!]
   system.stateVersion = "25.05";
 }

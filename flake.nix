@@ -55,7 +55,6 @@
         profiles.system = {
           sshUser = "adi";
           user = "root";
-          sshOpts = [ "-i" "${builtins.getEnv "HOME"}/.ssh/methamphetamine" ];
           path = deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.server;
         };
       };
