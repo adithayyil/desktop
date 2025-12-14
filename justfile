@@ -76,7 +76,7 @@ deploy host="meth":
         echo "Available nodes: $available"
         exit 1
     fi
-    NO_EMOJI=1 deploy .#{{host}} --skip-checks
+    deploy .#{{host}} --skip-checks
 
 # Update and deploy to a host
 deploy-upgrade host="meth": update
