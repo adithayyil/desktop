@@ -14,14 +14,23 @@
       p = 8080;
     };
 
+    accounts = {
+      adi = {
+        passwordFile = config.sops.secrets."copyparty/adi".path;
+      };
+    };
+
     volumes = {
       "/" = {
         path = "/srv/store";
+        access = {
+          rw = [ "adi" ];
+        };
       };
     };
   };
 
   systemd.tmpfiles.rules = [
-    "d /srv/copyparty 0755 copyparty copyparty -"
+    "d /srv/store 0755 copyparty copyparty -"
   ];
 }

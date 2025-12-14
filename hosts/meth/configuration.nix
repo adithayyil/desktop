@@ -2,6 +2,7 @@
   config,
   pkgs,
   copyparty,
+  sops-nix,
   ...
 }:
 
@@ -18,6 +19,7 @@
     ../../profiles/server
 
     copyparty.nixosModules.default
+    sops-nix.nixosModules.sops
   ];
 
   nixpkgs.overlays = [ copyparty.overlays.default ];
