@@ -23,6 +23,7 @@
   networking.networkmanager.enable = true;
 
   environment.systemPackages = with pkgs; [
+    sops
   ];
 
   # DO NOT CHANGE
