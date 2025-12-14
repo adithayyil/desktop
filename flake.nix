@@ -14,6 +14,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     copyparty.url = "github:9001/copyparty";
   };
 
@@ -23,6 +28,7 @@
       nixpkgs,
       home-manager,
       deploy-rs,
+      sops-nix,
       copyparty,
       ...
     }:
@@ -32,7 +38,7 @@
         nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           specialArgs = {
-            inherit hostname copyparty;
+            inherit hostname copyparty sops-nix;
           };
           modules = [ ./hosts/${configName}/configuration.nix ];
         };

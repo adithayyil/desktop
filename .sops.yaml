@@ -1,0 +1,8 @@
+keys:
+  - &meth age1kamap0drqtk458qat2jr03sma5l0k5lzlqsezqtzjhkd0azsc9lql5upk8
+
+creation_rules:
+  - path_regex: secrets/secrets\.yaml$
+    key_groups:
+      - age:
+          - *meth
