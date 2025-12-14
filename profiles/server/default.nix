@@ -6,5 +6,6 @@
     ./sudo.nix
     ./vaultwarden.nix
     ./caddy.nix
+    ./copyparty.nix
   ];
 }

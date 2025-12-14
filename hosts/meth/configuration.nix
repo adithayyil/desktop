@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  copyparty,
   ...
 }:
 
@@ -15,7 +16,11 @@
     ../../common/nix.nix
 
     ../../profiles/server
+
+    copyparty.nixosModules.default
   ];
+
+  nixpkgs.overlays = [ copyparty.overlays.default ];
 
   networking.networkmanager.enable = true;
 

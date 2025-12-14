@@ -13,6 +13,8 @@
       url = "github:serokell/deploy-rs";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    copyparty.url = "github:9001/copyparty";
   };
 
   outputs =
@@ -21,6 +23,7 @@
       nixpkgs,
       home-manager,
       deploy-rs,
+      copyparty,
       ...
     }:
     let
@@ -28,7 +31,9 @@
         configName: hostname:
         nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
-          specialArgs = { inherit hostname; };
+          specialArgs = {
+            inherit hostname copyparty;
+          };
           modules = [ ./hosts/${configName}/configuration.nix ];
         };
     in
