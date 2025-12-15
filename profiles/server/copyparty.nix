@@ -9,6 +9,10 @@
   services.copyparty = {
     enable = true;
 
+    package = pkgs.copyparty.override {
+      ffmpeg = pkgs.ffmpeg;
+    };
+
     settings = {
       i = "0.0.0.0";
       p = 8080;
@@ -24,7 +28,7 @@
       "/" = {
         path = "/srv/store";
         access = {
-          rw = [ "adi" ];
+          rwd = [ "adi" ];
         };
       };
     };
