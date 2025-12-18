@@ -12,7 +12,6 @@
       };
 
       "cloudflared/credentials" = {
-        owner = "cloudflared";
         mode = "0400";
       };
     };
