@@ -16,6 +16,8 @@
     settings = {
       i = "0.0.0.0";
       p = 8080;
+      shr = "/share";
+      shr-adm = "adi";
     };
 
     accounts = {
