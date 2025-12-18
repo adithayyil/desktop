@@ -21,7 +21,6 @@
       xff-hdr = "cf-connecting-ip";
       xff-src = "127.0.0.1,::1";
       rproxy = 1;
-      xf-host = true;
     };
 
     accounts = {
