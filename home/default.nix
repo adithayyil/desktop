@@ -29,27 +29,48 @@ in
   home.stateVersion = "25.05";
 
   home.packages = with pkgs; [
+    # dev
+    rustc
+    cargo
+    gcc
+
+    # cli
     neovim
     wget
     btop
     just
     jq
 
+    # AI
     claude-code
     github-copilot-cli
-    uv
+
+    # nix tools
     nixfmt-rfc-style
     deploy-rs
 
+    # python tools
+    uv
+
+    # communication
     vesktop
-    figma-linux
     signal-desktop
+
+    # media
     mpv
-    davinci
     spotify
+
+    # creative
+    figma-linux
+    davinci
+
+    # gaming
     lumafly
+
+    # utils
     localsend
 
+    # wl utilities
     brightnessctl
     wl-clipboard
     hyprshot
