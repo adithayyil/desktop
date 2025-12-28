@@ -32,7 +32,10 @@ in
     # dev
     rustc
     cargo
+    rust-analyzer
+    rustfmt
     gcc
+    rustlings
 
     # cli
     neovim
