@@ -18,6 +18,7 @@ in
     ./programs/git.nix
     ./programs/ssh.nix
     ./programs/vscodium.nix
+    ./programs/neovim.nix
     ./shell/bash.nix
   ];
 
@@ -38,7 +39,6 @@ in
     rustlings
 
     # cli
-    neovim
     wget
     btop
     just

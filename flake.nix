@@ -20,6 +20,11 @@
     };
 
     copyparty.url = "github:9001/copyparty";
+
+    nvf = {
+      url = "github:NotAShelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -30,6 +35,7 @@
       deploy-rs,
       sops-nix,
       copyparty,
+      nvf,
       ...
     }:
     let
@@ -54,7 +60,10 @@
           system = "x86_64-linux";
           config.allowUnfree = true;
         };
-        modules = [ ./home ];
+        modules = [
+          nvf.homeManagerModules.default
+          ./home
+        ];
       };
 
       deploy.nodes.meth = {
